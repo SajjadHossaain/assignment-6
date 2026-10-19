@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <nav className="shadow">
       <div className="container mx-auto flex justify-between items-center px-2">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center">
           <span onClick={() => setOpen(!open)}>
             {open ? (
               <X className="text-red-600 md:hidden"></X>
@@ -29,7 +29,7 @@ const Navbar = () => {
         </div>
         <ul className="gap-8 hidden md:flex">{links}</ul>
         <div className="flex items-center gap-2">
-          <ShoppingCart></ShoppingCart>
+          <ShoppingCart size={16}></ShoppingCart>
           <a href="">Login</a>
           <div className="rounded-2xl">
             <button className="btn btn-primary text-nowrap">Get Started</button>
