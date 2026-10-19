@@ -16,21 +16,22 @@ const Hero = () => {
               New: AI-Powered Tools Available
             </span>
           </div>
-          <div className='space-y-3 p-3'>
+          <div className="space-y-3 p-3">
             <h1 className="font-extrabold text-7xl text-[#101727]">
               Supercharge Your Digital Workflow
             </h1>
             <p className="text-[#627382]">
               Access premium AI tools, design assets, templates, and
-              productivity <br /> software—all in one place. Start creating faster
-              today. <br /> Explore Products
+              productivity <br /> software—all in one place. Start creating
+              faster today. <br /> Explore Products
             </p>
           </div>
           <div className="flex gap-4">
-            <button className="btn btn-primary rounded-full">
+            <button className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full">
               Explore Products
             </button>
-            <button className="btn btn-outline btn-primary rounded-full"><Play></Play>
+            <button className="btn btn-outline btn-primary rounded-full">
+              <Play></Play>
               Watch Demo
             </button>
           </div>
