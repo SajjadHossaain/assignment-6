@@ -37,7 +37,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="flex-1">
-          <img src={heroImg} alt="" className="w-full h-full object-cover" />
+          <img src={heroImg} alt="" className="w-full h-full object-contain" />
         </div>
       </section>
     );

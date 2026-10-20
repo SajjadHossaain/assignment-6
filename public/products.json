@@ -1,0 +1,131 @@
+
+[
+  {
+    "id": 1,
+    "name": "Basic Resume Builder",
+    "description": "Create a professional resume using simple templates.",
+    "price": 0,
+    "period": "one-time",
+    "tag": "Free",
+    "tagType": "new",
+    "features": [
+      "10+ resume templates",
+      "Basic resume editor",
+      "Export to PDF"
+    ],
+    "icon": "design"
+  },
+  {
+    "id": 2,
+    "name": "Pro Resume Builder",
+    "description": "Build an impressive resume with advanced customization.",
+    "price": 9.99,
+    "period": "monthly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": [
+      "50+ premium templates",
+      "ATS optimization",
+      "Unlimited PDF exports",
+      "Custom colors and fonts"
+    ],
+    "icon": "operation"
+  },
+  {
+    "id": 3,
+    "name": "AI Resume Writer",
+    "description": "Generate professional resume content using AI.",
+    "price": 14.99,
+    "period": "monthly",
+    "tag": "Best Seller",
+    "tagType": "best seller",
+    "features": [
+      "AI-powered resume writing",
+      "Smart content suggestions",
+      "Professional summaries",
+      "Keyword optimization"
+    ],
+    "icon": "portfolio"
+  },
+  {
+    "id": 4,
+    "name": "Cover Letter Pro",
+    "description": "Create personalized cover letters for job applications.",
+    "price": 7.99,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": [
+      "Unlimited cover letters",
+      "AI writing assistance",
+      "Job-specific customization",
+      "PDF export"
+    ],
+    "icon": "shopping"
+  },
+  {
+    "id": 5,
+    "name": "Career Starter Bundle",
+    "description": "Essential tools for students and fresh graduates.",
+    "price": 19.99,
+    "period": "one-time",
+    "tag": "Best Value",
+    "tagType": "best seller",
+    "features": [
+      "25+ resume templates",
+      "Cover letter builder",
+      "Interview preparation guide",
+      "Lifetime access"
+    ],
+    "icon": "social"
+  },
+  {
+    "id": 6,
+    "name": "ATS Checker",
+    "description": "Analyze your resume and improve its ATS compatibility.",
+    "price": 5.99,
+    "period": "monthly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": [
+      "ATS compatibility score",
+      "Missing keyword detection",
+      "Formatting analysis",
+      "Improvement suggestions"
+    ],
+    "icon": "writing"
+  },
+  {
+    "id": 7,
+    "name": "Career Pro Annual",
+    "description": "Access premium career tools throughout the year.",
+    "price": 79.99,
+    "period": "yearly",
+    "tag": "Save 33%",
+    "tagType": "popular",
+    "features": [
+      "Unlimited resume creation",
+      "All premium templates",
+      "AI resume and cover letters",
+      "Advanced ATS checker",
+      "Priority support"
+    ],
+    "icon": "Crown"
+  },
+  {
+    "id": 8,
+    "name": "Interview Preparation Kit",
+    "description": "Prepare for interviews with practical tools and guides.",
+    "price": 12.99,
+    "period": "one-time",
+    "tag": "New",
+    "tagType": "new",
+    "features": [
+      "100+ interview questions",
+      "Sample answers",
+      "Technical interview guide",
+      "Salary negotiation tips"
+    ],
+    "icon": "MessageCircle"
+  }
+]

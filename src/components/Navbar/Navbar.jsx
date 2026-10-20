@@ -8,7 +8,7 @@ const Navbar = () => {
     <Link key={route.id} route={route}></Link>
   ));
   return (
-    <nav className="shadow">
+    <nav className="bg-white shadow-md">
       <div className="container mx-auto flex justify-between items-center px-2">
         <div className="flex items-center">
           <span onClick={() => setOpen(!open)}>

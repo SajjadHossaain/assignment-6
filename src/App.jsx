@@ -2,12 +2,12 @@ import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
 import StatsSection from './components/StatsSection/StatsSection'
+import ProductsSection from './components/ProductsSection/ProductsSection'
 import { Suspense } from 'react'
 import axios from 'axios'
 
 const promiseStats = axios.get('stats.json');
 function App() {
-  console.log(promiseStats)
   return (
     <>
       <header>
@@ -16,9 +16,16 @@ function App() {
       <main>
         <Hero></Hero>
         <Suspense
-          fallback={<span className="loading loading-dots loading-xl"></span>}
+          fallback={
+            <div className="flex min-h-screen items-center justify-center">
+              <span className="loading loading-dots loading-xl"></span>
+            </div>
+          }
         >
           <StatsSection promiseStats={promiseStats}></StatsSection>
+        </Suspense>
+        <Suspense>
+          <ProductsSection></ProductsSection>
         </Suspense>
       </main>
     </>
