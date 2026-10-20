@@ -3,6 +3,7 @@ import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
 import StatsSection from './components/StatsSection/StatsSection'
 import ProductsSection from './components/ProductsSection/ProductsSection'
+import StepsSection from './components/Steps/Steps'
 import { Suspense } from 'react'
 import axios from 'axios'
 
@@ -27,6 +28,7 @@ function App() {
         <Suspense>
           <ProductsSection></ProductsSection>
         </Suspense>
+        <StepsSection></StepsSection>
       </main>
     </>
   );
