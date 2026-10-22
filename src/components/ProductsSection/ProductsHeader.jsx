@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProductsHeader = () => {
+const ProductsHeader = ({ isButtonSelect, setButtonSelect, cardCount }) => {
   return (
     <div className="flex justify-center">
       <div className="space-y-5">
@@ -12,11 +12,17 @@ const ProductsHeader = () => {
           designed <br /> to boost your productivity and creativity.
         </p>
         <div className="flex gap-2 justify-center">
-          <button className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full">
+          <button
+            onClick={() => setButtonSelect("products")}
+            className={`btn ${isButtonSelect === "products" ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA]" : ""} rounded-full`}
+          >
             Products
           </button>
-          <button className="btn rounded-full">
-            Cart <span>0</span>
+          <button
+            onClick={() => setButtonSelect("cart")}
+            className={`btn ${isButtonSelect === "cart" ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA]" : ""} rounded-full`}
+          >
+            Cart <span>{cardCount.length}</span>
           </button>
         </div>
       </div>

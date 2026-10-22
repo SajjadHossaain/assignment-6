@@ -4,15 +4,22 @@ import Hero from './components/Hero/Hero'
 import StatsSection from './components/StatsSection/StatsSection'
 import ProductsSection from './components/ProductsSection/ProductsSection'
 import StepsSection from './components/Steps/Steps'
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import axios from 'axios'
 
 const promiseStats = axios.get('stats.json');
 function App() {
+  const [cardCount, setCardCount] = useState([]);
+  // console.log(cardCount)
+  const handleCount = (product) => {
+    const addProducts = [...cardCount,product];
+    setCardCount(addProducts);
+    // console.log(cardCount)
+  };
   return (
     <>
       <header>
-        <Navbar></Navbar>
+        <Navbar cardCount={cardCount}></Navbar>
       </header>
       <main>
         <Hero></Hero>
@@ -26,7 +33,10 @@ function App() {
           <StatsSection promiseStats={promiseStats}></StatsSection>
         </Suspense>
         <Suspense>
-          <ProductsSection></ProductsSection>
+          <ProductsSection
+            cardCount={cardCount}
+            handleCount={handleCount}
+          ></ProductsSection>
         </Suspense>
         <StepsSection></StepsSection>
       </main>

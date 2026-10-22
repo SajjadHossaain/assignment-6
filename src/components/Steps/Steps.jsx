@@ -16,7 +16,6 @@ const promiseSteps = axios.get('steps.json')
 const StepsSection = () => {
   const stepsDataRes = use(promiseSteps);
   const stepsData = stepsDataRes.data;
-  console.log(stepsData)
     return (
       <section className="container mx-auto">
         <div className="text-center mb-6">
@@ -29,8 +28,8 @@ const StepsSection = () => {
         </div>
         
         <div className='grid grid-cols-1 md:grid-cols-3 items-center gap-3'>
-          {stepsData.map((step) => (
-            <StepsCard step={step} icon={icons[step.icon]}></StepsCard>
+          {stepsData.map((step,index) => (
+            <StepsCard key={index} step={step} icon={icons[step.icon]}></StepsCard>
           ))}
         </div>
       </section>

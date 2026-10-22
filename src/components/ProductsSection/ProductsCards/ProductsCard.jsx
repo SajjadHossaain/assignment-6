@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import designIcon from "././../../../assets/products/design-tool.png";
 import ProductsFeature from "./ProductsFeature";
-const ProductsCard = ({ product }) => {
-  const { name, description, price, period, tag, features, icon } = product;
-  console.log(icon);
+const ProductsCard = ({ product, handleCount }) => {
+  const { name, description, price, period, tag, features } = product;
+  const [cardAdded,setCardAdded] = useState(false)
+  const handleBuyButton = () =>{
+    handleCount(product);
+    setCardAdded(true);
+  }
+
   return (
     <div className="relative bg-white p-5 rounded-lg space-y-4 flex flex-col ">
       {/* Best Seller Badge */}
@@ -19,21 +24,24 @@ const ProductsCard = ({ product }) => {
             className="w-full h-full object-contain p-3"
           />
         </div>
-        <h1 className="font-bold text-2xl text-black">AI Writing Pro</h1>
+        <h1 className="font-bold text-2xl text-black">{name}</h1>
         <p className="text-[#627382]">
-          Generate high-quality content, blogs, and marketing copy in seconds
-          with advanced AI.
+         {description}
         </p>
-        <h3 className="font-bold text-[#101727] text-2xl">$29/mo</h3>
+        <h3 className="font-bold text-[#101727] text-2xl">${price}/mo</h3>
       </div>
       {/* card features */}
       <div className="flex-1 p-3 space-y-2">
-        {features.map((feature) => (
-          <ProductsFeature feature={feature}></ProductsFeature>
+        {features.map((feature, index) => (
+          <ProductsFeature feature={feature} key={index}></ProductsFeature>
         ))}
       </div>
-      <button className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] w-full rounded-full">
-        Buy Now
+      <button
+        onClick={handleBuyButton}
+        disabled={cardAdded ? true : false}
+        className={`btn ${cardAdded ? 'bg-green-500' :'bg-linear-to-r from-[#4F39F6] to-[#9514FA]'} w-full rounded-full text-white`}
+      >
+        {cardAdded ? "Added to Cart!" : "Buy Now"}
       </button>
     </div>
   );

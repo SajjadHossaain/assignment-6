@@ -9,7 +9,7 @@ const StepsCard = ({ step, icon }) => {
       </div>
 
       <div className="m-19 flex flex-col justify-center items-center space-y-4">
-        <div className="p-5 bg-amber-100 rounded-full">
+        <div className="p-5 bg-[#f2e8fe] rounded-full">
           <img src={icon} alt="" />
         </div>
         <h2 className="font-bold text-2xl text-[#001931]">{title}</h2>

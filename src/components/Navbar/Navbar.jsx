@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import navItems from "../../data/navigation";
 import Link from "./Link";
 import { Menu, ShoppingCart, X } from "lucide-react";
-const Navbar = () => {
+const Navbar = ({ cardCount }) => {
   const [open, setOpen] = useState(false);
   const links = navItems.map((route) => (
     <Link key={route.id} route={route}></Link>
@@ -28,8 +28,15 @@ const Navbar = () => {
           </span>
         </div>
         <ul className="gap-8 hidden md:flex">{links}</ul>
-        <div className="flex items-center gap-2">
-          <ShoppingCart size={16}></ShoppingCart>
+        <div className="flex items-center gap-4">
+          <div className="relative">
+            <ShoppingCart
+              size={16}
+            ></ShoppingCart>
+            <span className="absolute -top-2 -right-3 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-xs font-bold text-white">
+              {cardCount.length}
+            </span>
+          </div>
           <a href="">Login</a>
           <div className="rounded-2xl">
             <button className="btn btn-primary text-nowrap">Get Started</button>
