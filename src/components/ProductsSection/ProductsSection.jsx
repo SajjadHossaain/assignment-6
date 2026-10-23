@@ -8,6 +8,7 @@ const productsPromise = axios.get("products.json");
 
 const ProductsSection = ({ handleCount, cardCount }) => {
   const [isButtonSelect, setButtonSelect] = useState("products");
+  const [sum,setSum] = useState(0);
   return (
     <section className="container mx-auto py-28">
       <ProductsHeader
@@ -24,13 +25,18 @@ const ProductsSection = ({ handleCount, cardCount }) => {
           }
         >
           <ProductsCards
+            sum={sum}
+            setSum={setSum}
             handleCount={handleCount}
             productsPromise={productsPromise}
           ></ProductsCards>
         </Suspense>
       ) : (
         <Suspense>
-          <Cart  cardCount={cardCount}></Cart>
+          <Cart 
+          sum={sum}
+          setSum={setSum}
+          cardCount={cardCount}></Cart>
         </Suspense>
       )}
     </section>

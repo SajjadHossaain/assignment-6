@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import ProductsFeature from "./ProductsFeature";
-const ProductsCard = ({ product, handleCount, cardIcon }) => {
-  const { name, description, price, features } = product;
+const ProductsCard = ({ product, handleCount, cardIcon,sum,setSum }) => {
+  const { name, description, price, features} = product;
   const [cardAdded, setCardAdded] = useState(false);
   const handleBuyButton = () => {
     handleCount(product);
     setCardAdded(true);
+    setSum(sum + price)
   };
   return (
     <div className="relative bg-white p-5 rounded-lg space-y-4 flex flex-col ">
