@@ -30,7 +30,7 @@ const ProductsSection = ({ handleCount, cardCount }) => {
         </Suspense>
       ) : (
         <Suspense>
-          <Cart cardCount={cardCount}></Cart>
+          <Cart  cardCount={cardCount}></Cart>
         </Suspense>
       )}
     </section>

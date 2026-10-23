@@ -110,7 +110,7 @@
       "Advanced ATS checker",
       "Priority support"
     ],
-    "icon": "Crown"
+    "icon": "mentor"
   },
   {
     "id": 8,
@@ -126,6 +126,6 @@
       "Technical interview guide",
       "Salary negotiation tips"
     ],
-    "icon": "MessageCircle"
+    "icon": "interview"
   }
 ]

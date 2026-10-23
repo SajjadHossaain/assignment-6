@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-import designIcon from "././../../../assets/products/design-tool.png";
 import ProductsFeature from "./ProductsFeature";
-const ProductsCard = ({ product, handleCount }) => {
-  const { name, description, price, period, tag, features } = product;
-  const [cardAdded,setCardAdded] = useState(false)
-  const handleBuyButton = () =>{
+const ProductsCard = ({ product, handleCount, cardIcon }) => {
+  const { name, description, price, features } = product;
+  const [cardAdded, setCardAdded] = useState(false);
+  const handleBuyButton = () => {
     handleCount(product);
     setCardAdded(true);
-  }
-
+  };
   return (
     <div className="relative bg-white p-5 rounded-lg space-y-4 flex flex-col ">
       {/* Best Seller Badge */}
@@ -19,15 +17,13 @@ const ProductsCard = ({ product, handleCount }) => {
       <div className="space-y-2">
         <div className="mt-10 w-15 h-15">
           <img
-            src={designIcon}
+            src={cardIcon}
             alt=""
             className="w-full h-full object-contain p-3"
           />
         </div>
         <h1 className="font-bold text-2xl text-black">{name}</h1>
-        <p className="text-[#627382]">
-         {description}
-        </p>
+        <p className="text-[#627382]">{description}</p>
         <h3 className="font-bold text-[#101727] text-2xl">${price}/mo</h3>
       </div>
       {/* card features */}
@@ -39,7 +35,7 @@ const ProductsCard = ({ product, handleCount }) => {
       <button
         onClick={handleBuyButton}
         disabled={cardAdded ? true : false}
-        className={`btn ${cardAdded ? 'bg-green-500' :'bg-linear-to-r from-[#4F39F6] to-[#9514FA]'} w-full rounded-full text-white`}
+        className={`btn ${cardAdded ? "bg-green-500" : "bg-linear-to-r from-[#4F39F6] to-[#9514FA]"} w-full rounded-full text-white`}
       >
         {cardAdded ? "Added to Cart!" : "Buy Now"}
       </button>
