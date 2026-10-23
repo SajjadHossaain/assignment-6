@@ -35,6 +35,7 @@ function App() {
         <Suspense>
           <ProductsSection
             cardCount={cardCount}
+            setCardCount={setCardCount}
             handleCount={handleCount}
           ></ProductsSection>
         </Suspense>

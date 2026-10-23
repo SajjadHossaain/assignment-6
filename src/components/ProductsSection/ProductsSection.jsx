@@ -6,7 +6,7 @@ import Cart from "./ProductsCards/Cart";
 
 const productsPromise = axios.get("products.json");
 
-const ProductsSection = ({ handleCount, cardCount }) => {
+const ProductsSection = ({ handleCount, cardCount ,setCardCount}) => {
   const [isButtonSelect, setButtonSelect] = useState("products");
   const [sum,setSum] = useState(0);
   return (
@@ -35,8 +35,11 @@ const ProductsSection = ({ handleCount, cardCount }) => {
         <Suspense>
           <Cart 
           sum={sum}
+          setCardCount={setCardCount}
           setSum={setSum}
-          cardCount={cardCount}></Cart>
+          cardCount={cardCount}
+          handleCount={handleCount}
+          ></Cart>
         </Suspense>
       )}
     </section>

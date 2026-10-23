@@ -2,9 +2,7 @@ import React from "react";
 import CartItem from "./CartItem";
 import cardIcons from "../../../data/cardIcons";
 
-const Cart = ({ cardCount,sum,setSum}) => {
-  console.log(cardCount)
-  const handleCheckOut = () => {};
+const Cart = ({ cardCount, setCardCount, sum, setSum }) => {
   return (
     <div className="container mx-auto mt-10 p-4">
       <h1 className="text-2xl ml-20 font-bold">Your Cart</h1>
@@ -12,6 +10,10 @@ const Cart = ({ cardCount,sum,setSum}) => {
         {/* card */}
         {cardCount.map((item, index) => (
           <CartItem
+            sum={sum}
+            setSum={setSum}
+            cardCount={cardCount}
+            setCardCount={setCardCount}
             cardIcon={cardIcons[item.icon]}
             key={index}
             item={item}
@@ -21,10 +23,7 @@ const Cart = ({ cardCount,sum,setSum}) => {
           <h3>Total</h3>
           <p className="font-semibold text-2xl">${sum}</p>
         </div>
-        <button
-          onClick={handleCheckOut}
-          className="btn w-full rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA]"
-        >
+        <button className="btn w-full rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA]">
           Proceed to Checkout
         </button>
       </div>
