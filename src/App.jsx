@@ -6,6 +6,7 @@ import ProductsSection from './components/ProductsSection/ProductsSection'
 import StepsSection from './components/Steps/Steps'
 import { Suspense, useState } from 'react'
 import axios from 'axios'
+import TransparentPricing from './components/TransparentPricing/TransparentPricing'
 
 const promiseStats = axios.get('stats.json');
 function App() {
@@ -40,6 +41,7 @@ function App() {
           ></ProductsSection>
         </Suspense>
         <StepsSection></StepsSection>
+        <TransparentPricing></TransparentPricing>
       </main>
     </>
   );

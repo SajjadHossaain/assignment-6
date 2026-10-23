@@ -18,7 +18,7 @@ const Hero = () => {
           </div>
           <div className="space-y-3 p-3">
             <h1 className="font-extrabold text-7xl text-[#101727]">
-              Supercharge Your <br />
+              Supercharge Your
               <span className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">
                 Digital Workflow
               </span>

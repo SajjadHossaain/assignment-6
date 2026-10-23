@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "name": "Starter",
+    "description": "Essential AI tools for creating professional resumes.",
+    "price": 4.99,
+    "period": "monthly",
+    "buttonName": "Get Started",
+    "features": [
+      "AI resume writing",
+      "Basic resume templates",
+      "Resume content suggestions",
+      "Limited AI generations"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Pro",
+    "description": "Advanced AI tools to boost your career opportunities.",
+    "price": 14.99,
+    "period": "monthly",
+    "buttonName": "Upgrade to Pro",
+    "features": [
+      "Unlimited AI resume writing",
+      "Premium resume templates",
+      "ATS keyword optimization",
+      "AI cover letter generator",
+      "Professional resume summaries"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Enterprise",
+    "description": "Powerful resume solutions for teams and organizations.",
+    "price": 49.99,
+    "period": "monthly",
+    "buttonName": "Contact Sales",
+    "features": [
+      "Everything in Pro",
+      "Multiple team members",
+      "Centralized team management",
+      "Advanced analytics and reports",
+      "Priority customer support"
+    ]
+  }
+]
