@@ -1,18 +1,36 @@
 import React, { useState } from "react";
 import ProductsFeature from "./ProductsFeature";
-const ProductsCard = ({ product, handleCount, cardIcon,sum,setSum }) => {
-  const { name, description, price, features} = product;
+const ProductsCard = ({
+  product,
+  handleCount,
+  cardIcon,
+  sum,
+  setSum,
+}) => {
+  const { name, description, price, features, tag, tagType} = product;
   const [cardAdded, setCardAdded] = useState(false);
   const handleBuyButton = () => {
     handleCount(product);
     setCardAdded(true);
-    setSum(sum + price)
+    setSum(sum + price);
   };
+ const badgeStyle = (tagType) => {
+   if (tagType === "new") {
+     return "bg-[#DBFCE7] text-[#0A883E]";
+   }
+   if (tagType === "popular") {
+     return "bg-[#E1E7FF] text-[#9514FA]";
+   }
+   if (tagType === "best seller") {
+     return "bg-[#FEF3C6] text-[#BB4D00]";
+   }
+   return "";
+ };
   return (
     <div className="relative bg-white p-5 rounded-lg space-y-4 flex flex-col ">
       {/* Best Seller Badge */}
-      <span className="absolute right-4 top-5 bg-green-500 px-4 rounded-2xl">
-        Best Seller
+      <span className={`absolute right-4 top-5 ${badgeStyle(tagType)} px-4 rounded-2xl`}>
+        {tagType}
       </span>
       {/* dynamics icon */}
       <div className="space-y-2">
