@@ -5,7 +5,8 @@
     "description": "Essential AI tools for creating professional resumes.",
     "price": 4.99,
     "period": "monthly",
-    "buttonName": "Get Started",
+    "popular": false,
+    "buttonName": "Get Started Free",
     "features": [
       "AI resume writing",
       "Basic resume templates",
@@ -19,7 +20,8 @@
     "description": "Advanced AI tools to boost your career opportunities.",
     "price": 14.99,
     "period": "monthly",
-    "buttonName": "Upgrade to Pro",
+    "popular": true,
+    "buttonName": "Start Pro Trial",
     "features": [
       "Unlimited AI resume writing",
       "Premium resume templates",
@@ -34,6 +36,7 @@
     "description": "Powerful resume solutions for teams and organizations.",
     "price": 49.99,
     "period": "monthly",
+     "popular": false,
     "buttonName": "Contact Sales",
     "features": [
       "Everything in Pro",
