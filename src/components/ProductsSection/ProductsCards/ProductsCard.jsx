@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import ProductsFeature from "./ProductsFeature";
 import { Check } from "lucide-react";
+import { toast } from "react-toastify";
 const ProductsCard = ({ product, handleCount, cardIcon, sum, setSum }) => {
   const { name, description, price, features, tag, tagType } = product;
   const [cardAdded, setCardAdded] = useState(false);
   const handleBuyButton = () => {
+    toast('Added to Cart')
     handleCount(product);
     setCardAdded(true);
     setSum(sum + price);

@@ -9,6 +9,7 @@ import axios from 'axios'
 import TransparentPricing from './components/TransparentPricing/TransparentPricing'
 import Transform from './components/TransformSection/Transform'
 import Footer from './components/Footer/Footer'
+import { ToastContainer } from 'react-toastify'
 
 const promiseStats = axios.get('stats.json');
 function App() {
@@ -49,6 +50,7 @@ function App() {
       <footer>
         <Footer></Footer>
       </footer>
+      <ToastContainer></ToastContainer>
     </>
   );
 }
