@@ -9,11 +9,11 @@ const CartItem = ({ item, cardIcon, cardCount, setCardCount, sum, setSum }) => {
     setSum(sum - price)
   };
   return (
-    <div className="flex justify-between items-center px-4 py-3 space-y-3 shadow-lg rounded-2xl">
+    <div className="flex gap-5 flex-col sm:flex-row justify-between items-center px-4 py-3 space-y-3 shadow-lg rounded-2xl">
       <div className="flex gap-5 items-center">
         <img src={cardIcon} alt="" className="h-10 w-10" />
         <div>
-          <h1 className="font-bold text-2xl">{name}</h1>
+          <h1 className="font-bold text-sm sm:text-2xl text-nowrap">{name}</h1>
           <p className="font-semibold text-gray-500">${price}</p>
         </div>
       </div>

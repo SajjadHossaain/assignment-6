@@ -5,8 +5,8 @@ import cardIcons from "../../../data/cardIcons";
 const Cart = ({ cardCount, setCardCount, sum, setSum }) => {
   return (
     <div className="container mx-auto mt-10 p-4">
-      <h1 className="text-2xl ml-20 font-bold">Your Cart</h1>
-      <div className="p-19 space-y-5">
+      <h1 className="text-2xl ml-4 font-bold">Your Cart</h1>
+      <div className=" space-y-5">
         {/* card */}
         {cardCount.map((item, index) => (
           <CartItem

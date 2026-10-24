@@ -6,10 +6,10 @@ const Footer = () => {
   return (
     <footer className="bg-[#101727] py-28">
       <div className="container mx-auto space-y-16">
-        <div className=" grid gap-5 grid-cols-5 ">
+        <div className=" grid gap-5 ml-5 md:grid-cols-2 lg:grid-cols-5">
           <div className="space-y-3">
             <h1 className="text-white font-bold text-4xl">DigiTools</h1>
-            <p className="text-white/50">
+            <p className="text-white/50 text-wrap">
               Premium digital tools for creators, professionals, and businesses.
               Work smarter with our suite of powerful tools.
             </p>
@@ -87,11 +87,11 @@ const Footer = () => {
           </div>
         </div>
         <hr className="border-[#FAFAFA]" />
-        <div className="flex justify-between items-center mx-5">
+        <div className="flex flex-col gap-5 md:flex-row justify-between items-center mx-5">
           <p className="text-white">
             &copy; 2026 Digitools. All rights reserved.
           </p>
-          <div className="flex flex-wrap gap-5">
+          <div className="flex justify-center flex-wrap gap-5">
             <a href="#privacy" className="text-white">
               Privacy Policy
             </a>
