@@ -8,6 +8,7 @@ import { Suspense, useState } from 'react'
 import axios from 'axios'
 import TransparentPricing from './components/TransparentPricing/TransparentPricing'
 import Transform from './components/TransformSection/Transform'
+import Footer from './components/Footer/Footer'
 
 const promiseStats = axios.get('stats.json');
 function App() {
@@ -44,8 +45,10 @@ function App() {
         <StepsSection></StepsSection>
         <TransparentPricing></TransparentPricing>
         <Transform></Transform>
-        
       </main>
+      <footer>
+        <Footer></Footer>
+      </footer>
     </>
   );
 }
