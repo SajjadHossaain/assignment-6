@@ -1,12 +1,16 @@
-import React from 'react';
-import { Trash } from "lucide-react";
-
+import React from 'react';  
 const CartItem = ({ item, cardIcon, cardCount, setCardCount, sum, setSum }) => {
   const {name,price} = item;
   const handleRemove = (item) => {
-    const filterCard = cardCount.filter((prod) => prod.name !== item.name);
+    if(sum>=0){
+      setSum(sum - price)
+    }
+    else{
+      alert("Not Enough Money");
+      return;
+    }
+    const filterCard = cardCount.filter((prod) => prod.name !== item.name); 
     setCardCount(filterCard);
-    setSum(sum - price)
   };
   return (
     <div className="flex gap-5 flex-col sm:flex-row justify-between items-center px-4 py-3 space-y-3 shadow-lg rounded-2xl">
@@ -19,9 +23,9 @@ const CartItem = ({ item, cardIcon, cardCount, setCardCount, sum, setSum }) => {
       </div>
       <button
         onClick={() => handleRemove(item)}
-        className="btn px-10 rounded-2xl"
+        className="btn px-10 text-red-700 rounded-2xl"
       >
-        <Trash></Trash>
+        Remove
       </button>
     </div>
   );
